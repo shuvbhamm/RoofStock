@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'Monsterrat';
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: Monsterrat;
+    font-size:12px;
+}
+button{
+    cursor: pointer;
+}
+header{
+    width: 100%;
+    background: #1E5259; /*#1b3335*/
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+header .logo{
+    margin: 0 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.banner{
+    height: 90vh;
+    width: 100%;
+    background: #1C3336;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.banner>.banner-img{
+    height: 50vh;
+    width: 50%;
+    background: white;
+    border-radius: 20em 0 0 20em ;
+    border: 2em #1C3B3F solid;
+    border-right: none;
+    background-image: url("./images/banner-img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.banner>.banner-content{
+    text-align: left;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bolder;
+    z-index: 100;
+}
+.banner-content>h5{
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 200;
+}
+.banner-content>button{
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 15px 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .2s;
+    position: relative;
+}   
+
+.banner-content>button:hover{
+    background: #ffc450;
+}
+.list>ul{
+    list-style: none;
+    display: flex;
+    width: auto;
+    margin: 0 0 0 5em;
+}
+.list li{
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.list li::after{
+    content: "▼";
+    padding: 0 5px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+.LogInBtn{
+    display: flex;
+    align-self: flex-end;
+    /* align-items: center; */
+    /* width: 100%; */
+}
+.btn{
+    font-size: 1em;
+    padding: 5px 8px;
+    color: #ffc450;
+    background: transparent;
+    border: none;
+    transition: .1s linear;
+    font-weight: bold;
+}
+.sign-up{
+    border: 1.5px #ffc450 solid;
+    margin: 10px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+.sign-up:hover{
+    background:#ffc450 ;
+    color: #1E5259;
+    font-weight: bold;
+}
+.log-in:hover{
+    border-bottom: 1.5px solid #ffc450;
+}
+.circle{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    border: 40px solid #1E5259;
+    z-index:100;
+    opacity: .2;
+    z-index: 99;
+}
+.circle1{
+    bottom: -20%;
+    left: -1%;
+}
+.circle2{
+    transform: scale(.3);
+    bottom: 40%;
+    left: 10%;
+}
+
+
+@media (max-width : 875px) {
+    html{
+        font-size: 10px;
+    }
+    nav{
+        display: none;
+    }
+}
+@media (max-width:680px){
+    .banner{
+        flex-direction: column;
+        font-size: .9em;
+        text-align:;
+    }
+    .banner .banner-img{
+        border-radius: 1200px 1200px 0 0;
+        border: 2em #1C3B3F solid;
+        border-bottom: none;
+        width: 80vh;
+    }
+    .banner-content .banner-btn{
+        margin: auto;
+    }
+    .circle1{
+        transform: translate(400px,-390px);
+    }
+    .circle2{
+        transform: translate(-150px,-50px) scale(.3);
+    }
+}
